@@ -26,10 +26,10 @@ if (!fs.existsSync(dir)){
 
 const execSync = require('child_process').execSync;
 
-execSync('git clone https://github.com/Dygmalab/chrysalis-api.git Build/chrysalis-api');
+execSync('git clone branch development --single-branch https://github.com/Dygmalab/chrysalis-api.git Build/chrysalis-api');
 process.chdir("Build/chrysalis-api/");
 execSync('yarn install --prefix');
-execSync('git clone https://github.com/Dygmalab/Chrysalis.git ../chrysalis/');
+execSync('git clone branch development --single-branch https://github.com/Dygmalab/Chrysalis.git ../chrysalis/');
 process.chdir("../chrysalis");
 execSync('yarn upgrade usb --prefix');
 execSync('yarn install --prefix');
